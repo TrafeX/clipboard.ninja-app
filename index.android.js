@@ -1,9 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
+// @flow
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -13,9 +8,9 @@ import {
 export default class ReactNativeApp extends Component {
   render() {
     return (
-        <WebView
-          source={{uri: 'https://clipboard.ninja?utm_source=android_app'}}
-        />
+      <WebView
+        source={{uri: 'https://clipboard.ninja?utm_source=android_app'}}
+      />
     );
   }
 }

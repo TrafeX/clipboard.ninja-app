@@ -90,8 +90,8 @@ android {
         applicationId "nl.trafex.apps.clipboardninja"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 3
-        versionName "2.0.1"
+        versionCode 4
+        versionName "2.0.2"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
