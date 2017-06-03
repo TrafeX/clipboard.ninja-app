@@ -1,6 +1,6 @@
-# Clipboard.ninja Android & IOS app
+# Clipboard.ninja Android app
 
-Android and IOS app for [https://clipboard.ninja](https://clipboard.ninja).
+Android and (soon/maybe) IOS app for [https://clipboard.ninja](https://clipboard.ninja).
 
 * Download the [Android App in the Play Store](https://play.google.com/store/apps/details?id=nl.trafex.apps.clipboardninja)
 
@@ -15,3 +15,9 @@ Clipboard.ninja is a quick and secure way to share text between devices.
  * It's private; you first need to connect to the other device before you can send something, this way the data never has to be (temporarily) stored on the server. 
  * You can connect with multiple devices, simultaneously receiving the text.
  * No registration is needed, a 6 digit number is enough to connect the devices.
+
+## Todo
+
+- [ ] Change the color of the header and statusbar
+- [ ] Allow the app to work in split screen
+- [ ] Hide the splashscreen when loaded
