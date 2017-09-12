@@ -18,6 +18,6 @@ Clipboard.ninja is a quick and secure way to share text between devices.
 
 ## Todo
 
-- [ ] Change the color of the header and statusbar
+- [X] Change the color of the header and statusbar
 - [ ] Allow the app to work in split screen
 - [ ] Hide the splashscreen when loaded
