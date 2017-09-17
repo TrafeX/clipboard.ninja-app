@@ -21,3 +21,19 @@ Clipboard.ninja is a quick and secure way to share text between devices.
 - [X] Change the color of the header and statusbar
 - [ ] Allow the app to work in split screen
 - [ ] Hide the splashscreen when loaded
+
+## Development
+
+- Start Android emulator
+```shell
+cd ~/Android/Sdk/tools
+emulator -use-system-libs -avd Nexus_5X_API_24
+```
+- Run Android devserver
+```shell
+node_modules/.bin/react-native run-android
+```
+- Create release
+```shell
+node_modules/.bin/react-native run-android --variant=release
+``

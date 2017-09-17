@@ -1,30 +1,32 @@
 // @flow
 import React from 'react';
-import {WebView, StyleSheet, Linking, Dimensions} from 'react-native';
+import {WebView, StyleSheet, Linking} from 'react-native';
 
-const ClipboardView = () => (
-  <WebView
-    style={styles.webview}
-    source={{uri: 'https://clipboard.ninja?utm_source=android_app'}}
-    ref={(ref) => { this.webview = ref; }}
-    onNavigationStateChange={(event) => {
-      if (!event.url.startsWith('https://clipboard.ninja')) {
-        this.webview.stopLoading();
-        Linking.openURL(event.url);
-      }
-    }}
-  />
-);
+const ClipboardView = (props) => {
+  const styles = StyleSheet.create({
+    webview: {
+      flex: 1,
+      width: parseInt(props.layout.width, 10),
+      height: parseInt(props.layout.height, 10),
+    },
+  });
 
-const deviceHeight = Dimensions.get('window').height;
-const deviceWidth = Dimensions.get('window').width;
-
-const styles = StyleSheet.create({
-  webview: {
-    flex: 1,
-    width: deviceWidth,
-    height: deviceHeight,
-  },
-});
+  return (
+      <WebView
+        style={styles.webview}
+        source={{uri: 'https://clipboard.ninja?utm_source=android_app'}}
+        ref={(ref) => {
+          this.webview = ref;
+        }}
+        scalesPageToFit={false}
+        onNavigationStateChange={(event) => {
+          if (!event.url.startsWith('https://clipboard.ninja')) {
+            this.webview.stopLoading();
+            Linking.openURL(event.url);
+          }
+        }}
+      />
+    );
+};
 
 export default ClipboardView;
