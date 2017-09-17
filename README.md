@@ -36,4 +36,4 @@ node_modules/.bin/react-native run-android
 - Create release
 ```shell
 node_modules/.bin/react-native run-android --variant=release
-``
+```
