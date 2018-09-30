@@ -19,21 +19,31 @@ Clipboard.ninja is a quick and secure way to share text between devices.
 ## Todo
 
 - [X] Change the color of the header and statusbar
-- [ ] Allow the app to work in split screen
-- [ ] Hide the splashscreen when loaded
+- [X] Allow the app to work in split screen
+- [X] Hide the splashscreen when loaded
 
 ## Development
+Also see [Running React Native app in Ubuntu](https://medium.com/@dooboolab/running-react-native-app-in-ubuntu-18-04-7d1db4ac7518)
+
+### Requirements
+- `sudo apt install openjdk-8-jre openjdk-8-jdk`
+- `sudo apt install qemu-kvm libvirt-bin`
+
+### Run emulator
 
 - Start Android emulator
 ```shell
 cd ~/Android/Sdk/tools
 emulator -use-system-libs -avd Nexus_5X_API_24
 ```
+
 - Run Android devserver
 ```shell
 node_modules/.bin/react-native run-android
 ```
-- Create release
+
+### Create release
+
 ```shell
 node_modules/.bin/react-native run-android --variant=release
 ```
