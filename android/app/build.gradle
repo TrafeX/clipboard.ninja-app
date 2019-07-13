@@ -94,7 +94,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true
 
 /**
  * Use international variant JavaScriptCore
@@ -117,8 +117,8 @@ android {
         applicationId "nl.trafex.apps.clipboardninja"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 12
-        versionName "2.0.6"
+        versionCode 14
+        versionName "2.0.7"
     }
     splits {
         abi {
