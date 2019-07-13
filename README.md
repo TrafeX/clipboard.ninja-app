@@ -16,12 +16,6 @@ Clipboard.ninja is a quick and secure way to share text between devices.
  * You can connect with multiple devices, simultaneously receiving the text.
  * No registration is needed, a 6 digit number is enough to connect the devices.
 
-## Todo
-
-- [X] Change the color of the header and statusbar
-- [X] Allow the app to work in split screen
-- [X] Hide the splashscreen when loaded
-
 ## Development
 Also see [Running React Native app in Ubuntu](https://medium.com/@dooboolab/running-react-native-app-in-ubuntu-18-04-7d1db4ac7518)
 
@@ -39,6 +33,7 @@ emulator -use-system-libs -avd Nexus_5X_API_24
 
 - Run Android devserver
 ```shell
+node_modules/.bin/react-native start
 node_modules/.bin/react-native run-android
 ```
 

@@ -7,19 +7,18 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "^16.5.2",
-    "react-native": "^0.57.1"
+    "react": "^16.8.6",
+    "react-native": "^0.60.3",
+    "react-native-webview": "^6.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/runtime": "^7.1.2",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "23.6.0",
-    "jest": "23.6.0",
-    "metro-react-native-babel-preset": "^0.47.0",
-    "react-native-git-upgrade": "^0.2.7",
-    "react-test-renderer": "16.5.2",
-    "schedule": "0.4.0"
+    "@babel/core": "^7.3.3",
+    "@babel/runtime": "^7.3.1",
+    "@react-native-community/eslint-config": "^0.0.3",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-test-renderer": "16.8.6"
   },
   "jest": {
     "preset": "react-native"

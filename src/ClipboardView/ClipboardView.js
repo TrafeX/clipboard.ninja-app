@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
-import {WebView, StyleSheet, Linking} from 'react-native';
+import {StyleSheet, Linking} from 'react-native';
+import {WebView} from 'react-native-webview';
 
 const ClipboardView = (props) => {
   const styles = StyleSheet.create({

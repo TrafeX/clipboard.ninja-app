@@ -2,13 +2,13 @@
 import React, { Component } from 'react';
 import {AppRegistry} from 'react-native';
 import App from './src';
+//
+// export default class ReactNativeApp extends Component {
+//   render() {
+//     return (
+//       <App/>
+//     );
+//   }
+// }
 
-export default class ReactNativeApp extends Component {
-  render() {
-    return (
-      <App/>
-    );
-  }
-}
-
-AppRegistry.registerComponent('ReactNativeApp', () => ReactNativeApp);
+AppRegistry.registerComponent('Clipboardninja', () => App);
