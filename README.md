@@ -40,5 +40,7 @@ node_modules/.bin/react-native run-android
 ### Create release
 
 ```shell
-node_modules/.bin/react-native run-android --variant=release
+cd android/
+./gradlew bundleRelease
 ```
+File can be found in `app/build/outputs/bundle/release`
