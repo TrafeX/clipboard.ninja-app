@@ -16,16 +16,7 @@ const ClipboardView = (props) => {
       <WebView
         style={styles.webview}
         source={{uri: 'https://clipboard.ninja?utm_source=android_app'}}
-        ref={(ref) => {
-          this.webview = ref;
-        }}
         scalesPageToFit={false}
-        onNavigationStateChange={(event) => {
-          if (!event.url.startsWith('https://clipboard.ninja')) {
-            this.webview.stopLoading();
-            Linking.openURL(event.url);
-          }
-        }}
       />
     );
 };
