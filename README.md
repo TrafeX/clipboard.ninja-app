@@ -28,7 +28,7 @@ Also see [Running React Native app in Ubuntu](https://medium.com/@dooboolab/runn
 - Start Android emulator
 ```shell
 cd ~/Android/Sdk/tools
-emulator -use-system-libs -avd Nexus_5X_API_24
+emulator -use-system-libs -avd Android13
 ```
 
 - Run Android devserver
@@ -43,4 +43,4 @@ node_modules/.bin/react-native run-android
 cd android/
 ./gradlew bundleRelease
 ```
-File can be found in `app/build/outputs/bundle/release`
+File can be found in `app/build/outputs/bundle/app-release.aab`
