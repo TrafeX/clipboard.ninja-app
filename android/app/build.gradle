@@ -145,5 +145,5 @@ dependencies {
     }
 
     // Unified Android 12+ splash screen, backported down to API 24.
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("androidx.core:core-splashscreen:1.2.0")
 }
