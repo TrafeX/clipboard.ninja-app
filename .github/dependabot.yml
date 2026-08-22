@@ -19,11 +19,50 @@ updates:
       # See AGENTS.md.
       - dependency-name: "react-native-webview"
 
+      # Everything below is capped by React Native 0.87's own toolchain. Each
+      # cap is a *hard* failure (npm ci or the test/lint run), not a warning, so
+      # letting Dependabot reopen these every week only costs CI minutes.
+      # Revisit whenever React Native is upgraded — see AGENTS.md, "Upgrade
+      # ceilings".
+
+      # @react-native/eslint-config@0.87.0 peer-depends on
+      # eslint@"^8.0.0 || ^9.0.0" -> `npm ci` fails outright on 10.x.
+      - dependency-name: "eslint"
+        versions: [">= 10"]
+
+      # @react-native/babel-preset@0.87.0 is a Babel 7 preset; @babel/* 8.x
+      # peer-requires @babel/core@^8.
+      - dependency-name: "@babel/core"
+        versions: [">= 8"]
+      - dependency-name: "@babel/runtime"
+        versions: [">= 8"]
+
+      # @typescript-eslint@8.67.0 (the newest release, pulled in by
+      # @react-native/eslint-config) peer-caps typescript at <6.1.0, and
+      # ts-api-utils crashes against the TypeScript 7 compiler API.
+      - dependency-name: "typescript"
+        versions: [">= 7"]
+
+      # @react-native/jest-preset@0.87.0 pins jest-environment-node@29.7.0;
+      # mixing it with jest-runtime 30 throws
+      # "this._moduleMocker.clearMocksOnScope is not a function".
+      - dependency-name: "jest"
+        versions: [">= 30"]
+      - dependency-name: "@types/jest"
+        versions: [">= 30"]
+
   - package-ecosystem: gradle
     directory: "/android"
     schedule:
       interval: monthly
     open-pull-requests-limit: 3
+    ignore:
+      # Gradle 9.7.x embeds kotlin-stdlib 2.4.0, whose metadata the Kotlin 2.2.0
+      # compiler used by node_modules/@react-native/gradle-plugin cannot read
+      # (it reads up to 2.3.0), so :settings-plugin:compileKotlin fails. 9.6.1
+      # is the highest usable version. See AGENTS.md, "Upgrade ceilings".
+      - dependency-name: "gradle-wrapper"
+        versions: [">= 9.7"]
 
   - package-ecosystem: github-actions
     directory: "/"

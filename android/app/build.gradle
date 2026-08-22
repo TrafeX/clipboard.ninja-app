@@ -100,8 +100,8 @@ android {
         applicationId "nl.trafex.apps.clipboardninja"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 19
-        versionName "3.0.0"
+        versionCode 20
+        versionName "3.0.1"
     }
     signingConfigs {
         debug {
@@ -145,5 +145,5 @@ dependencies {
     }
 
     // Unified Android 12+ splash screen, backported down to API 24.
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("androidx.core:core-splashscreen:1.2.0")
 }
