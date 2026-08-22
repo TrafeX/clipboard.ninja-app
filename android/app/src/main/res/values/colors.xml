@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffffff</color>
+    <color name="colorPrimary">#fffb8c00</color>
+    <color name="colorDark">#ffef6c00</color>
+    <color name="splash_background">#ffffffff</color>
+    <color name="ic_launcher_background">#fffb8c00</color>
+</resources>

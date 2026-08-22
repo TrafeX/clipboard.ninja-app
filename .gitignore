@@ -29,6 +29,7 @@ build/
 .gradle
 local.properties
 *.iml
+.cxx
 
 # node.js
 #
@@ -54,3 +55,11 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+# Play App Signing PEPK export — key material, never commit
+android/app/android-bundle-key
+*.jks
+*.pepk
+
+# ...but the well-known debug keystore is meant to be shared
+!android/app/debug.keystore
