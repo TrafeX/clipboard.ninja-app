@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The Android 12+ splash canvas is 288dp with the artwork expected inside the
+  inner 192dp, i.e. a (288-192)/2/288 = 16.7% inset on each side.
+-->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/splashlogo"
+    android:insetLeft="16.7%"
+    android:insetTop="16.7%"
+    android:insetRight="16.7%"
+    android:insetBottom="16.7%" />

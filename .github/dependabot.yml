@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      react-native:
+        patterns:
+          - "react-native"
+          - "@react-native/*"
+          - "@react-native-community/*"
+          - "react"
+          - "react-test-renderer"
+    ignore:
+      # Pinned to an exact version from the `next` dist-tag. npm's `latest` tag
+      # is still 14.x, so Dependabot would "update" this into a downgrade.
+      # See AGENTS.md.
+      - dependency-name: "react-native-webview"
+
+  - package-ecosystem: gradle
+    directory: "/android"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
